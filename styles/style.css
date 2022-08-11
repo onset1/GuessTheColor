@@ -1,0 +1,123 @@
+body {
+  margin: 0px;
+  background-color: #cf0945;
+  color: white;
+  font-family: "noto sans";
+}
+
+header {
+  grid-area: header;
+  font-size: 40px;
+  background-color: #8f0730;
+  border-right: solid white 5px;
+  padding: 10px 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+main section #main-chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px;
+  background-color: #ce3865;
+  font-size: 20px;
+}
+
+main section #main-chart #color-chart {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: fr fr fr;
+      grid-template-columns: fr fr fr;
+  -ms-grid-rows: fr fr;
+      grid-template-rows: fr fr;
+      grid-template-areas: "one two three" "four five six";
+}
+
+main section #main-chart #color-chart .color-option {
+  padding: 20px;
+  margin: 10px;
+  border: solid white 1px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+main section #main-chart #color-chart .color-option:hover {
+  border: solid black 1px;
+}
+
+main section #main-chart #color-chart .color-option:active {
+  border: solid pink 1px;
+}
+
+main section #main-chart #color-chart #color-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: one;
+  background-color: blue;
+}
+
+main section #main-chart #color-chart #color-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+main section #main-chart #color-chart #color-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+main section #main-chart #color-chart #color-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+main section #main-chart #color-chart #color-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+main section #main-chart #color-chart #color-6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+footer {
+  background-color: #8f0730;
+  text-align: center;
+  padding: 40px;
+  position: absolute;
+  bottom: 0px;
+  width: 94%;
+}
+/*# sourceMappingURL=style.css.map */
