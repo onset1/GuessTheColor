@@ -2,8 +2,13 @@ $main-color: rgb(207, 9, 69);
 $main-color-light: rgb(206, 56, 101);
 $main-color-dark: rgb(143, 7, 48);
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: 0px;
   background-color: $main-color;
   color: white;
   font-family: "noto sans";
@@ -17,15 +22,17 @@ header {
   padding: 10px 20px;
   margin-left: 0px;
   margin-right: 0px;
+  margin-bottom: 0px;
 }
 
 main {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 0px;
-  margin-right: 0px;
+  height: 100%;
+  width: 100%;
+  margin-top: 40px;
+  height: 600px;
+  // margin: 30px 0 30px 0;
   section {
     #main-chart {
       display: flex;
@@ -35,7 +42,28 @@ main {
       padding: 40px;
       background-color: $main-color-light;
       font-size: 20px;
+      border: solid $main-color-dark 0px;
+      box-shadow: 0px 0px 30px $main-color-dark;
       #prompt {
+        background-color: black;
+        color: white;
+        width: 100%;
+        padding: 40px;
+        text-align: center;
+        position: relative;
+        top: -40px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        margin: 0;
+      }
+      #rgb-value {
+        background-color: $main-color-dark;
+        width: 100%;
+        padding: 5px 40px 5px 40px;
+        text-align: center;
+        margin: 0;
+        position: relative;
+        top: -50px;
       }
       #color-chart {
         display: grid;
@@ -45,16 +73,16 @@ main {
         .color-option {
           padding: 20px;
           margin: 10px;
-          border: solid white 1px;
           height: 30px;
           width: 30px;
           text-align: center;
           cursor: pointer;
+          box-shadow: 0 0 5px white;
           &:hover {
-            border: solid black 1px;
+            box-shadow: 0 0 5px black;
           }
           &:active {
-            border: solid pink 1px;
+            box-shadow: 0 0 5px $main-color-dark;
           }
         }
         #color-1 {
@@ -77,15 +105,64 @@ main {
           grid-area: six;
         }
       }
+      #main-chart-bottom {
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+        .button-1 {
+          background-color: black;
+          cursor: pointer;
+          padding: 8px;
+          box-shadow: 0 0 5px black;
+          &:hover {
+            background-color: gray;
+            box-shadow: 0 0 5px gray;
+          }
+        }
+      }
     }
+  }
+}
+
+aside {
+  #settings-chart {
+    display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      background-color: $main-color-light;
+      font-size: 20px;
+      border: solid $main-color-dark 0px;
+      box-shadow: 0px 0px 30px $main-color-dark;
+      #settings {
+        background-color: $main-color-dark;
+        width: 100%;
+        height: 90px;
+        line-height: 90px;
+        padding: 0 40px 0 40px;
+        text-align: center;
+        position: relative;
+        top: -40px;
+      }
+      .setting {
+        cursor: pointer;
+        width: 100%;
+        padding: 0 40px 0 40px;
+        text-align: center;
+        &:hover {
+          box-shadow: 0px 0px 30px $main-color-dark;
+        }
+      }
   }
 }
 
 footer {
   background-color: $main-color-dark;
   text-align: center;
-  padding: 40px;
-  position: absolute;
-  bottom: 0px;
-  width: 94%;
+  padding: 40px 0 40px 0;
+  // position: absolute;
+  // bottom: -100px;
+  width: 100%;
+  clear: both;
 }
