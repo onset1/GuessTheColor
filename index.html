@@ -9,7 +9,7 @@
     <script type="text/javascript" src="./scripts/main.js" async></script>
 </head>
 <body>
-    <header>Guess the color</header>
+    <header>| GUESS THE COLOR |</header>
     <nav></nav>
     <main>
         <section>
@@ -17,12 +17,12 @@
                 <div id="prompt">What color is it?</div>
                 <div id="rgb-value">rgb(0, 0, 0)</div>
                 <div id="color-chart">
-                    <div id="color-1" class="color-option">1</div>
-                    <div id="color-2" class="color-option">2</div>
-                    <div id="color-3" class="color-option">3</div>
-                    <div id="color-4" class="color-option">4</div>
-                    <div id="color-5" class="color-option">5</div>
-                    <div id="color-6" class="color-option">6</div>
+                    <div id="color-1" class="color-option"></div>
+                    <div id="color-2" class="color-option"></div>
+                    <div id="color-3" class="color-option"></div>
+                    <div id="color-4" class="color-option"></div>
+                    <div id="color-5" class="color-option"></div>
+                    <div id="color-6" class="color-option"></div>
                 </div>
                 <div id="result"></div>
                 <div id="main-chart-bottom">
@@ -33,12 +33,24 @@
         </section>
         <aside>
             <div id="settings-chart">
-                <div id="settings">Settings</div>
+                <div id="settings">SETTINGS</div>
                 <div class="setting" id="language">Language</div>
-                <div class="setting-language">English</div>
-                <div class="setting-language">Spanish</div>
-                <div class="setting-language">French</div>
-                <div class="setting-language">Esperanto</div>
+                <div class="setting-language" id="en-pair">
+                    <div class="setting-language-name">English</div>
+                    <img class="setting-language-flag" id="flag-uk" src="images/320px-Flag_of_the_United_Kingdom.svg.png" alt="">
+                </div>
+                <div class="setting-language" id="es-pair">
+                    <div class="setting-language-name">Spanish</div>
+                    <img class="setting-language-flag" id="flag-es" src="images/Bandera_de_España.svg.png" alt="">
+                </div>
+                <div class="setting-language" id="fr-pair">
+                    <div class="setting-language-name">French</div>
+                    <img class="setting-language-flag" id="flag-fr" src="images/320px-Flag_of_France.svg.png" alt="">
+                </div>
+                <div class="setting-language" id="eo-pair">
+                    <div class="setting-language-name">Esperanto</div>
+                    <img class="setting-language-flag" id="flag-eo" src="images/320px-Flag_of_Esperanto.svg.png" alt="">
+                </div>
                 <div class="setting" id="difficulty">Difficulty</div>
                 <div class="setting-difficulty">Default modes</div>
                 <div class="setting-difficulty">Custom modes</div>

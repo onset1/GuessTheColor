@@ -12,13 +12,17 @@ body {
 
 header {
   grid-area: header;
-  font-size: 40px;
+  font-size: 30px;
   background-color: #8f0730;
   border-right: solid white 5px;
-  padding: 10px 20px;
+  padding: 30px 20px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
+  -webkit-box-shadow: 0px 0px 30px #8f0730;
+          box-shadow: 0px 0px 30px #8f0730;
+  text-align: center;
+  letter-spacing: 15px;
 }
 
 main {
@@ -191,6 +195,7 @@ aside #settings-chart {
   border: solid #8f0730 0px;
   -webkit-box-shadow: 0px 0px 30px #8f0730;
           box-shadow: 0px 0px 30px #8f0730;
+  width: 200px;
 }
 
 aside #settings-chart #settings {
@@ -202,6 +207,7 @@ aside #settings-chart #settings {
   text-align: center;
   position: relative;
   top: -40px;
+  letter-spacing: 3px;
 }
 
 aside #settings-chart .setting {
@@ -222,6 +228,35 @@ aside #settings-chart .setting-language, aside #settings-chart .setting-difficul
   margin: 5px 0 5px 0;
   text-align: left;
   width: 100%;
+  padding: 0 40px 0 40px;
+  border-bottom: dotted #8f0730 2px;
+  cursor: pointer;
+}
+
+aside #settings-chart .setting-language:hover, aside #settings-chart .setting-difficulty:hover, aside #settings-chart .setting-color:hover, aside #settings-chart .setting-visuals:hover, aside #settings-chart .setting-sounds:hover {
+  -webkit-box-shadow: 0px 0px 30px #8f0730;
+          box-shadow: 0px 0px 30px #8f0730;
+}
+
+aside #settings-chart .setting-language {
+  -ms-grid-columns: 80% 1fr;
+      grid-template-columns: 80% 1fr;
+}
+
+aside #settings-chart .setting-language-name {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+aside #settings-chart .setting-language-flag {
+  -webkit-clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+          clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  width: 45px;
+  height: 22px;
 }
 
 aside #settings-chart #aside-chart-bottom {

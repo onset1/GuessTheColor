@@ -16,13 +16,16 @@ body {
 
 header {
   grid-area: header;
-  font-size: 40px;
+  font-size: 30px;
   background-color: $main-color-dark;
   border-right: solid white 5px;
-  padding: 10px 20px;
+  padding: 30px 20px;
   margin-left: 0px;
   margin-right: 0px;
   margin-bottom: 0px;
+  box-shadow: 0px 0px 30px $main-color-dark;
+  text-align: center;
+  letter-spacing: 15px;
 }
 
 main {
@@ -135,6 +138,7 @@ aside {
       font-size: 20px;
       border: solid $main-color-dark 0px;
       box-shadow: 0px 0px 30px $main-color-dark;
+      width: 200px;
       #settings {
         background-color: $main-color-dark;
         width: 100%;
@@ -144,6 +148,7 @@ aside {
         text-align: center;
         position: relative;
         top: -40px;
+        letter-spacing: 3px;
       }
       .setting {
         cursor: pointer;
@@ -160,6 +165,24 @@ aside {
         margin: 5px 0 5px 0;
         text-align: left;
         width: 100%;
+        padding: 0 40px 0 40px;
+        border-bottom: dotted $main-color-dark 2px;
+        cursor: pointer;
+        &:hover {
+          box-shadow: 0px 0px 30px $main-color-dark;
+        }
+      }
+      .setting-language {
+        grid-template-columns: 80% 1fr;
+      }
+      .setting-language-name {
+        grid-column: 1 / 2;
+      }
+      .setting-language-flag {
+        clip-path: polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%);
+        grid-column: 2 / 3;
+        width: 45px;
+        height: 22px;
       }
       #aside-chart-bottom {
         display: none;
