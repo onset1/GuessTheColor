@@ -1,3 +1,15 @@
+document.getElementById("play-text").addEventListener("click", game);
+
+function game() {
+    document.getElementById("body").style.display = "block";
+    document.getElementById("body").style.overflowY = "visible";
+    document.getElementById("play").style.display = "none";
+    document.getElementById("header").style.display = "block";
+    document.getElementById("section").style.display = "inline";
+    document.getElementById("aside").style.display = "inline";
+    document.getElementById("footer").style.display = "block";
+}
+
 // Coming up with a random rgb to code to guess
 
 var rgb_value_raw = document.getElementById("rgb-value");
@@ -38,6 +50,7 @@ function square_click_1() {
     var my_decision_value = document.getElementById("color-1").style.backgroundColor;
     if (my_decision_value == rgb_value) {
         document.getElementById("result").innerHTML = "you win";
+        document.getElementById("score-wins").innerHTML++;
     } else {
         document.getElementById("result").innerHTML = "you lose";
     };
@@ -47,6 +60,7 @@ function square_click_2() {
     var my_decision_value = document.getElementById("color-2").style.backgroundColor;
     if (my_decision_value == rgb_value) {
         document.getElementById("result").innerHTML = "you win";
+        document.getElementById("score-wins").innerHTML++;
     } else {
         document.getElementById("result").innerHTML = "you lose";
     };
@@ -56,6 +70,7 @@ function square_click_3() {
     var my_decision_value = document.getElementById("color-3").style.backgroundColor;
     if (my_decision_value == rgb_value) {
         document.getElementById("result").innerHTML = "you win";
+        document.getElementById("score-wins").innerHTML++;
     } else {
         document.getElementById("result").innerHTML = "you lose";
     };
@@ -65,6 +80,7 @@ function square_click_4() {
     var my_decision_value = document.getElementById("color-4").style.backgroundColor;
     if (my_decision_value == rgb_value) {
         document.getElementById("result").innerHTML = "you win";
+        document.getElementById("score-wins").innerHTML++;
     } else {
         document.getElementById("result").innerHTML = "you lose";
     };
@@ -74,6 +90,7 @@ function square_click_5() {
     var my_decision_value = document.getElementById("color-5").style.backgroundColor;
     if (my_decision_value == rgb_value) {
         document.getElementById("result").innerHTML = "you win";
+        document.getElementById("score-wins").innerHTML++;
     } else {
         document.getElementById("result").innerHTML = "you lose";
     };
@@ -83,6 +100,7 @@ function square_click_6() {
     var my_decision_value = document.getElementById("color-6").style.backgroundColor;
     if (my_decision_value == rgb_value) {
         document.getElementById("result").innerHTML = "you win";
+        document.getElementById("score-wins").innerHTML++;
     } else {
         document.getElementById("result").innerHTML = "you lose";
     };
@@ -93,6 +111,7 @@ function square_click_6() {
 document.getElementById("next-button").addEventListener("click", newgame);
 
 function newgame() {
+    document.getElementById("score-total").innerHTML++;
     document.getElementById("result").innerHTML = ""; // Resetting value
 
     // Coming up with a random rgb to code to guess
@@ -129,6 +148,7 @@ function newgame() {
         var my_decision_value = document.getElementById("color-1").style.backgroundColor;
         if (my_decision_value == rgb_value) {
             document.getElementById("result").innerHTML = "you win";
+            document.getElementById("score-wins").innerHTML++;
         } else {
             document.getElementById("result").innerHTML = "you lose";
         };
@@ -138,6 +158,7 @@ function newgame() {
         var my_decision_value = document.getElementById("color-2").style.backgroundColor;
         if (my_decision_value == rgb_value) {
             document.getElementById("result").innerHTML = "you win";
+            document.getElementById("score-wins").innerHTML++;
         } else {
             document.getElementById("result").innerHTML = "you lose";
         };
@@ -147,6 +168,7 @@ function newgame() {
         var my_decision_value = document.getElementById("color-3").style.backgroundColor;
         if (my_decision_value == rgb_value) {
             document.getElementById("result").innerHTML = "you win";
+            document.getElementById("score-wins").innerHTML++;
         } else {
             document.getElementById("result").innerHTML = "you lose";
         };
@@ -156,6 +178,7 @@ function newgame() {
         var my_decision_value = document.getElementById("color-4").style.backgroundColor;
         if (my_decision_value == rgb_value) {
             document.getElementById("result").innerHTML = "you win";
+            document.getElementById("score-wins").innerHTML++;
         } else {
             document.getElementById("result").innerHTML = "you lose";
         };
@@ -165,6 +188,7 @@ function newgame() {
         var my_decision_value = document.getElementById("color-5").style.backgroundColor;
         if (my_decision_value == rgb_value) {
             document.getElementById("result").innerHTML = "you win";
+            document.getElementById("score-wins").innerHTML++;
         } else {
             document.getElementById("result").innerHTML = "you lose";
         };
@@ -174,6 +198,7 @@ function newgame() {
         var my_decision_value = document.getElementById("color-6").style.backgroundColor;
         if (my_decision_value == rgb_value) {
             document.getElementById("result").innerHTML = "you win";
+            document.getElementById("score-wins").innerHTML++;
         } else {
             document.getElementById("result").innerHTML = "you lose";
         };

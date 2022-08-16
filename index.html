@@ -8,14 +8,22 @@
     <title>Guess the color</title>
     <script type="text/javascript" src="./scripts/main.js" async></script>
 </head>
-<body>
-    <header>| GUESS THE COLOR |</header>
+<body id="body">
+    <div id="play">
+        <div id="play-text">PLAY</div>
+    </div>
+    <header id="header">| GUESS THE COLOR |</header>
     <nav></nav>
     <main>
-        <section>
+        <section id="section">
             <div id="main-chart">
                 <div id="prompt">What color is it?</div>
                 <div id="rgb-value">rgb(0, 0, 0)</div>
+                <div id="score">
+                    <span id="score-wins">0</span>
+                    <span>/</span>
+                    <span id="score-total">1</span>
+                </div>
                 <div id="color-chart">
                     <div id="color-1" class="color-option"></div>
                     <div id="color-2" class="color-option"></div>
@@ -31,7 +39,7 @@
                 </div>
             </div>
         </section>
-        <aside>
+        <aside id="aside">
             <div id="settings-chart">
                 <div id="settings">SETTINGS</div>
                 <div class="setting" id="language">Language</div>
@@ -76,6 +84,6 @@
             </div>
         </aside>
     </main>
-    <footer>All lefts reserved.</footer>
+    <footer id="footer">All lefts reserved.</footer>
 </body>
 </html>
