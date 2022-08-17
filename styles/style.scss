@@ -29,7 +29,39 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  // @keyframes dot-text-animation {
+  //   from {color: white}
+  //   to {color: black}
+  // }
+  // #dot-text {
+  //   font-weight: bold;
+  //   animation-name: dot-text-animation;
+  //   animation-duration: 2s;
+  //   animation-iteration-count: 3;
+  //   animation-direction: alternate;
+  // }
+  #dot-text {
+    display: none;
+    position: relative; // necessary for js animation
+    font-weight: bold;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+  }
+  #dot-text-2 {
+    display: none;
+    position: relative; // necessary for js animation
+    font-weight: bold;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+  }
+  #name-text {
+    display: none;
+    position: absolute; // necessary for js animation
+  }
   #play-text {
+    display: none;
     cursor: pointer;
     &:hover {
       color: $main-color-light

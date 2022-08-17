@@ -10,6 +10,81 @@ function game() {
     document.getElementById("footer").style.display = "block";
 }
 
+// Initial animation
+
+var num = 0;
+var id = setInterval(animation_1, 300);
+
+function animation_1() {
+    if (num==0) {
+        num++
+    } else if (num==1) {
+        document.getElementById("dot-text").style.display = "block";
+        document.getElementById("dot-text-2").style.display = "block";
+        num++
+    } else if (num==2) {
+        document.getElementById("dot-text").style.display = "none";
+        document.getElementById("dot-text-2").style.display = "none";
+        num++
+    } else if (num==3) {
+        document.getElementById("dot-text").style.display = "block";
+        document.getElementById("dot-text-2").style.display = "block";
+        num++
+    } else if (num==4) {
+        document.getElementById("dot-text").style.display = "none";
+        document.getElementById("dot-text-2").style.display = "none";
+        num++
+    } else if (num==5) {
+        document.getElementById("dot-text").style.display = "block";
+        document.getElementById("dot-text-2").style.display = "block";
+        num++
+    } else if (num==6) {
+        document.getElementById("dot-text").style.borderRadius = "0%";
+        document.getElementById("dot-text-2").style.borderRadius = "0%";
+        clearInterval(id);
+    }
+}
+
+// Animations will be performed one after the other, without using function callbacks (for now), so they
+// will be constructed using some time delay.
+
+var num_2 = 0;
+var id_2 = setInterval(animation_2, 40);
+
+function animation_2() {
+    if (num_2==70) {
+        clearInterval(id_2);
+    } else if (num_2>60) { // 60 is the time delay, so that animation_1 finishes without problem
+        num_2++;
+        document.getElementById("dot-text").style.height = num_2 + "px";
+        document.getElementById("dot-text-2").style.height = num_2 + "px";
+    } else {
+        num_2++;
+    }
+}
+
+var num_3 = 0;
+var id_3 = setInterval(animation_3, 10);
+
+function animation_3() {
+    if (num_3==400) {
+        clearInterval(id_3);
+    } else if (num_3>30) {
+        num_3++;
+        document.getElementById("dot-text").style.left = num_3 + "px";
+        document.getElementById("dot-text-2").style.right = num_3 + "px";
+    } else {
+        num_3++;
+    }
+}
+
+
+
+// function animation_2() {
+//     id_2 = setInterval
+
+
+
 // Coming up with a random rgb to code to guess
 
 var rgb_value_raw = document.getElementById("rgb-value");
