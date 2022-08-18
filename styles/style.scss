@@ -61,7 +61,7 @@ body {
     position: absolute; // necessary for js animation
   }
   #play-text {
-    display: none;
+    // display: none;
     cursor: pointer;
     &:hover {
       color: $main-color-light
